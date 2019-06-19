@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Budget Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="budget.css" />
+    <script src="budget.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel|Bevan|Boogaloo|Lobster"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../header.css"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Top -->
+      <div class="container">
+        <div class="top">
+          <div class="budget">
+            <h2 class="heading">Available budget:</h2>
+            <span
+              >€
+              <h1 class="budget-output">0</h1></span
+            >
+          </div>
+        </div>
+        <!-- Bottom -->
+        <div class="bottom">
+          <!-- Left side -->
+          <div class="income-block">
+            <div class="above-income">
+              <div class="income">
+                <label for="outcome-input" class="income-label labels"
+                  >FUNDS: €</label
+                >
+                <p class="income-output">0</p>
+              </div>
+            </div>
+
+            <div class="add-income">
+              <!-- 1 -->
+              <i class="fas fa-plus"></i>
+              <!-- 2 -->
+              <div class="form form-desc">
+                <input
+                  type="text"
+                  class="input income-desc"
+                  autocomplete="off"
+                  required
+                />
+                <label for="name" class="label-name">
+                  <span class="content-name">Description</span>
+                </label>
+              </div>
+              <!-- 3 -->
+              <div class="form form-amount">
+                <input
+                  type="text"
+                  class="value income-amount"
+                  onkeypress="return isNumber(event)"
+                  autocomplete="off"
+                  required
+                />
+                <label for="name" class="label-name">
+                  <span class="content-name">Amount</span>
+                </label>
+              </div>
+            </div>
+            <!-- list -->
+            <div class="income-list list">
+              <ul></ul>
+            </div>
+          </div>
+          <!-- Right side -->
+          <div class="expense-block">
+            <div class="above-expense">
+              <div class="expense">
+                <label for="expense-input" class="expense-label labels"
+                  >EXPENSES: €</label
+                >
+                <p class="expense-output">0</p>
+              </div>
+            </div>
+            <div class="add-expense">
+              <i class="fas fa-plus"></i>
+
+              <div class="form form-desc">
+                <input
+                  type="text"
+                  class="value expense-desc"
+                  autocomplete="off"
+                  required
+                />
+                <label for="name" class="label-name">
+                  <span class="content-name">Description</span>
+                </label>
+              </div>
+
+              <div class="form form-amount">
+                <input
+                  type="text"
+                  class="value expense-amount"
+                  onkeypress="return isNumber(event)"
+                  autocomplete="off"
+                  required
+                />
+                <label for="name" class="label-name">
+                  <span class="content-name">Amount</span>
+                </label>
+              </div>
+            </div>
+            <!-- list -->
+            <div class="expense-list list">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
